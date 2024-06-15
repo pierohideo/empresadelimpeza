@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XYZ Limpeza</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Logo Placeholder</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">Quem Somos</a>
+            <a href="#services">Nossos Serviços</a>
+            <a href="#contact">Contato</a>
+        </nav>
+    </header>
+
+    <section id="home" class="section home">
+        <div class="overlay">
+            <h1>Bem-vindo à XYZ Limpeza</h1>
+            <p>Oferecemos serviços de limpeza para hospedagens, eventos e residências.</p>
+        </div>
+    </section>
+
+    <section id="about" class="section about">
+        <div class="content">
+            <div class="text">
+                <h2>Quem Somos</h2>
+                <p>Somos uma empresa dedicada a oferecer serviços de limpeza de alta qualidade para diversas ocasiões. Nossa missão é proporcionar ambientes limpos e organizados, para que você possa se concentrar no que realmente importa.</p>
+            </div>
+            <div class="image">
+                <img src="about-image.jpg" alt="Quem Somos">
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section services">
+        <h2>Nossos Serviços</h2>
+        <div class="service-cards">
+            <div class="service">
+                <img src="service-icon1.png" alt="Hospedagens">
+                <h3>Hospedagens</h3>
+                <p>Limpeza profissional para Airbnb e outras hospedagens, garantindo conforto e qualidade para seus hóspedes.</p>
+            </div>
+            <div class="service">
+                <img src="service-icon2.png" alt="Residencial">
+                <h3>Residencial</h3>
+                <p>Serviços de limpeza para sua casa ou festas de família, mantendo seu lar sempre limpo e organizado.</p>
+            </div>
+            <div class="service">
+                <img src="service-icon3.png" alt="Corporativo">
+                <h3>Corporativo</h3>
+                <p>Limpeza para eventos corporativos pequenos, oferecendo um ambiente agradável e profissional.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact">
+        <h2>Contato</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Nome" required>
+            <input type="email" placeholder="Email" required>
+            <input type="text" placeholder="WhatsApp" required>
+            <select required>
+                <option value="">Tipo de Propriedade</option>
+                <option value="residencial">Residencial</option>
+                <option value="airbnb">Airbnb</option>
+                <option value="empresarial">Empresarial</option>
+            </select>
+            <textarea placeholder="Sua mensagem" rows="4" required></textarea>
+            <button type="submit">Enviar</button>
+            <button type="button" onclick="whatsapp()">Chamar no WhatsApp</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="logo">Logo Placeholder</div>
+        <div class="contact-info">
+            <p>Email: contato@exemplo.com</p>
+            <p>Telefone: +55 11 99999-9999</p>
+            <p>Instagram: @exemplo</p>
+            <p>Facebook: /exemplo</p>
+        </div>
+    </footer>
+
+    <script>
+        // Função para chamar no WhatsApp
+        function whatsapp() {
+            window.location.href = 'https://api.whatsapp.com/send?phone=5511993481232';
+        }
+
+        // Ocultar cabeçalho ao rolar
+        let prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+            let currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.querySelector("header").style.top = "0";
+            } else {
+                document.querySelector("header").style.top = "-70px";
+            }
+            prevScrollpos = currentScrollPos;
+        }
+    </script>
+</body>
+</html>

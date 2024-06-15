@@ -1,0 +1,141 @@
+/* Estilos básicos para o layout e efeito parallax */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+header {
+    background: #002c5f; /* Tom sereno de azul marinho */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: top 0.3s;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+.section {
+    padding: 5rem 2rem;
+}
+
+.home {
+    background-image: url('home-background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.home .overlay {
+    background: rgba(0, 44, 95, 0.7);
+    padding: 2rem;
+}
+
+.about .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about .text {
+    width: 60%;
+}
+
+.about .image {
+    width: 35%;
+}
+
+.about img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.services {
+    text-align: center;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.service {
+    flex: 1;
+    margin: 1rem;
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.service:hover {
+    transform: scale(1.05);
+}
+
+.service img {
+    width: 50%;
+}
+
+.contact {
+    text-align: center;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.contact-form input, .contact-form select, .contact-form textarea, .contact-form button {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background: #002c5f;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    background: #002c5f;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+footer .logo {
+    font-size: 1.2rem;
+}
+
+footer .contact-info {
+    text-align: right;
+}
